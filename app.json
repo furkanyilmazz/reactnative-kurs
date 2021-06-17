@@ -1,4 +1,12 @@
 {
-  "name": "reactnative",
-  "displayName": "reactnative"
+  "name": "reatnative-kurs",
+  "displayName": "reatnative-kurs",
+  "expo": {
+    "name": "reatnative-kurs",
+    "slug": "reatnative-kurs",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
 }
