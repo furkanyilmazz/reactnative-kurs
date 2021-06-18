@@ -6,9 +6,11 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
 //Screen Components
 import Index from "./screens/index/index";
+import homePage from "./screens/homePage/homePage";
 
 //components
 import { BottomNavigator } from "./components/customBottomBar/customBottomTabBar";
+import loginScreen from "./screens/loginScreen/loginScreen";
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -16,16 +18,28 @@ const Stack = createStackNavigator();
 const Router = (props) => {
   const TabScreens = () => (
     <Tab.Navigator tabBar={(props) => <BottomNavigator {...props} />}>
-      <Tab.Screen name="AnaSayfa" component={Index} />
+      <Tab.Screen name="Index" component={Index} />
+      <Tab.Screen name="AnaSayfa" component={homePage} />
+      <Tab.Screen name="GirisYap" component={loginScreen} />
     </Tab.Navigator>
   );
 
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="AnaSayfa">
+      <Stack.Navigator initialRouteName="GirisYap">
+        <Stack.Screen
+          name="Index"
+          component={Index}
+          options={{ headerShown: false }}
+        />
         <Stack.Screen
           name="AnaSayfa"
-          component={Index}
+          component={homePage}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="GirisYap"
+          component={loginScreen}
           options={{ headerShown: false }}
         />
         <Stack.Screen

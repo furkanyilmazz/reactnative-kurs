@@ -9,7 +9,7 @@ import {
   Alert,
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
-import { Color } from "../../assets/color";
+import { customColor } from "../../assets/color";
 import { StyleVariables } from "../../styleVariable/StyleVariable";
 
 export default class BottomNavigator extends Component {
@@ -24,7 +24,7 @@ export default class BottomNavigator extends Component {
               <Ionicons
                 name="add"
                 size={45}
-                color={Color.backgroundColor}
+                color={customColor.backgroundColor}
                 style={{ marginLeft: 3 }}
               />
             </View>
@@ -41,7 +41,7 @@ export default class BottomNavigator extends Component {
               <Ionicons
                 name="person-outline"
                 size={32}
-                color={Color.buttonColor}
+                color={customColor.buttonColor}
               />
             </TouchableOpacity>
           </View>
@@ -54,7 +54,7 @@ export default class BottomNavigator extends Component {
               <Ionicons
                 name="people-outline"
                 size={42}
-                color={Color.buttonColor}
+                color={customColor.buttonColor}
               />
             </TouchableOpacity>
           </View>
@@ -69,7 +69,7 @@ const styles = StyleSheet.create({
   Main: {
     flex: 1,
     flexDirection: "column",
-    backgroundColor: Color.secondColor,
+    backgroundColor: customColor.secondColor,
   },
   buttonSettings: {
     position: "absolute",
@@ -82,7 +82,7 @@ const styles = StyleSheet.create({
   },
   buttonBarSettings: {
     position: "absolute",
-    backgroundColor: Color.gray,
+    backgroundColor: customColor.gray,
     bottom: 0,
     width: "100%",
     height: StyleVariables.width * 0.17,
@@ -107,7 +107,7 @@ const styles = StyleSheet.create({
     position: "absolute",
   },
   actionBtn: {
-    backgroundColor: Color.buttonColor,
+    backgroundColor: customColor.buttonColor,
   },
   icons: {
     alignItems: "center",
